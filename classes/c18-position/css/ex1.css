@@ -1,0 +1,78 @@
+*{margin: 0; padding: 0;}
+#hero{
+    /* line-height: 0; */
+    /* 이미지도 글자처럼 취급되어서 행간이 포함되어있음 그래서 라인하이트를 0으로 하면 띄우는 공간이 없어짐 */
+    height: 100vh;
+    position: relative;
+}
+#hero video{
+    width: 100%;
+    height: 100%;
+    /* 높이는 부모태그의 높이가 명확하게 적용되어있어야 자식태그의 높이가 적용이 된다. */
+    object-fit: cover;
+}
+.floatingBox{
+    position: absolute;
+    /* position속성을 쓰면 컨텐트박스는 그냥 블록형태가 아니라 display가 인라인블록형태로 바뀐다. */
+    left: calc(50% - 45%);
+    top: calc(50% - 45%);
+    width: 90%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.701);
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+.floatingBox h2{
+    font-size: 10rem;
+}
+.floatingBox p{
+    width: 50%;
+    margin-top: 2rem;
+}
+header{
+    background: orange;
+    height: 100px;
+    position: fixed;
+    left: 0;
+    /* position: absolute;, position: fixed;를 하면 무조건 좌or우,위or아래 위치를 주어야함 */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+main{
+    min-height: 100vh;
+    margin: 0 3rem;
+}
+main h2{
+    font-size: 2.5rem;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+.stickyBox>section{
+    height: calc(100vh - 100px);
+    position: sticky;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stickyBox>section>h2{
+    border: 1px solid red;
+}
+.stickyBox>section:nth-of-type(1){
+    background:url(../img/img1.jpg) no-repeat 50% 50% / cover;
+}
+.stickyBox>section:nth-of-type(2){
+    background:url(../img/img2.jpg) no-repeat 50% 50% / cover;
+}
+.stickyBox>section:nth-of-type(3){
+    background:url(../img/img3.jpg) no-repeat 50% 50% / cover;
+}
+.stickyBox>section:nth-of-type(4){
+    background:url(../img/img4.jpg) no-repeat 50% 50% / cover;
+}

@@ -1,0 +1,450 @@
+/* ///////////////////////////////////////////pc페이지디자인////////////////////////////////////////////// */
+
+header{
+    height: 5rem;
+    background-color: var(--main-color);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* position:absolute를 해서 헤더가 가리니까 z-index를 넉넉하게 1000으로 설정해야한다. */
+
+
+/* 메인바가 밑쪽에 줄만 있는 경우 */
+    /* height: 100px;
+    background-color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%; */
+}
+header .innerContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.mo{display: none;}
+.gnb{
+    display: flex;
+    text-transform: uppercase;
+
+    /* 메인바가 둥그런 형태로 되어있는 경우 (위에 태그를 그대로두고 추가해서 사용) */
+    /* background: var(--main-color);
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 3rem; */
+}
+.gnb>li{
+    margin-right: 3rem;
+}
+.gnb>li:last-of-type{
+    margin-right: 0;
+}
+.hero{
+    height: 100vh;
+    position: relative;
+}
+.hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.heroDesc{
+    position: absolute;
+    /*  position:absolute를 했으니까 인라인블록이 되었으니 너비, 높이를 줘야함 */
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.600);
+    color: #fff;
+}
+.heroDesc .innerContent{
+    /* border: 1px solid greenyellow; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 메인축은 저스티파이 교차축은 얼라인 */
+    text-align: center;
+}
+.heroDesc h4{
+    font-size: 3.15rem;
+}
+.con1{
+    padding-top: 7.5rem;
+    text-align: center;
+    position: relative;
+}
+.con1:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+    background-color: var(--main-color);
+    z-index: -1;
+}
+.con1img{
+    margin-top: 4rem;
+    line-height: 0;
+}
+.con2{
+    padding-top: 7.5rem;
+    padding-bottom: 3.5rem;
+}
+.con2 .innerContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.con2 section{
+    width: calc(50% - 3.5rem);
+}
+.pro3{
+    margin-top: 3.5rem;
+}
+.desc{
+    margin-bottom: 4rem;
+}
+.pro1>p{
+    margin-bottom: 1.5rem;
+}
+.pro1>p:last-of-type{
+    margin-bottom: 0;
+}
+.pro2 dl{
+    display: flex;
+    flex-wrap: wrap;
+}
+.pro2 dl>dt{
+    width: 12rem;
+    margin-bottom: 1.5rem;
+    color: var(--main-color);
+    font-weight: var(--font-weight-bold);
+}
+.pro2 dl>dd{
+    width: calc(100% - 12rem);
+}
+.pro2 p{
+    margin-bottom: 1.5rem;
+}
+.pro2>p:last-of-type{
+    margin-bottom: 0;
+}
+.charList{
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+.charList>li{
+    border: 1px solid var(--main-color);
+    /* border-radius: 3rem;
+    background-color: var(--main-color); */
+    color: var(--main-color);
+    padding: .5rem 1rem;
+    /* color: #fff; */
+}
+.charList>li.rev{
+    background-color: var(--main-color);
+    color: #fff;
+}
+.pro3 dt{
+    margin-bottom: 1.5rem;
+    color: var(--main-color);
+    font-weight: var(--font-weight-bold);
+}
+.certList>li{
+    margin-bottom: 1rem;
+    display: flex;
+}
+.certList>li>i{
+    width: 12rem;
+}
+.certList>li>span{
+    width: calc(100% - 12rem);
+}
+.certList>li:last-of-type{
+    margin-bottom: 0;
+}
+.con3{
+    background-color: var(--main-color);
+    padding: 3.5rem 0;
+    color: #fff;
+}
+.con3 h5{
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 1.5rem;
+}
+.eduList{
+    display: flex;
+    flex-wrap: wrap;
+}
+.eduList>li{
+    width: calc((100% - (3 - 1)*1rem)/3);
+    box-sizing: border-box;
+    margin-right: 1rem;
+    padding: 1rem 0;
+}
+.eduList>li:nth-of-type(3n){
+    margin-right: 0;
+}
+.eduList h6 img{
+    height: 1.5rem;
+    margin-right: 1rem
+}
+.eduList h6{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.con4{
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    text-align: center;
+}
+.popupList{
+    margin-top: 3.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+.popupList>li{
+    width: calc((100% - (3 - 1)*1rem)/3);
+    box-sizing: border-box;
+    margin-right: 1rem;
+    padding: 1rem 0;
+}
+.popupList>li:nth-of-type(3n){
+    margin-right: 0;
+}
+.popupList>li figure{
+    margin-bottom: 1rem;
+}
+.popupList>li>div:nth-of-type(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.popupList>li>div:nth-of-type(1) h6{
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-bold);
+}
+.btnDown{
+    border-radius: 3rem;
+    padding: 0.7rem 1.3rem;
+    background-color: #000;
+    color: #fff;
+}
+.btnDown:hover{
+    color: var(--main-color);
+}
+.popupList>li>figure{
+    line-height: 0;
+}
+.popupList>li>figure.border{
+    border: 1px solid #000;
+}
+.popupList>li>p{
+    margin: 1rem 0;
+}
+.popupList>li>div:nth-of-type(2){
+    display: flex;
+}
+.popupList>li>div:nth-of-type(2)>dl{
+    flex: 1;
+    /* flex:1;이라는 것은 flex-basis:0%;,flex-grow:1;,flex-shrink:1;이라는 뜻이다.(즉 너비를 똑같이 나눠갖는다.) */
+}
+.popupList>li>div:nth-of-type(2)>dl dt{
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 1rem;
+}
+.popupList>li>div:nth-of-type(2)>dl dd{
+    display: flex;
+    align-items: center;
+}
+.thumbColor{
+    width: 1.1rem;
+    height: 1.1rem;
+    background-color: #fff;
+    border: 1px solid #000;
+    font-size: 0;
+    margin-right: 0.5rem;
+    box-sizing: border-box;
+}
+.color_000000{
+    background-color: #000000;
+    border: none;
+}
+.color_FFFFFF{
+    background-color: #ffffff;
+    border: none;
+    border: 1px solid #000;
+}
+.color_10513B{
+    background-color: #10513B;
+    border: none;
+}
+.color_D41E21{
+    background-color: #D41E21;
+    border: none;
+}
+.color_FF7A07{
+    background-color: #FF7A07;
+    border: none;
+}
+.color_171C32{
+    background-color: #171C32;
+    border: none;
+}
+.color_384559{
+    background-color: #384559;
+    border: none;
+}
+.color_E5E7E9{
+    background-color: #E5E7E9;
+    border: none;
+}
+.color_DF3B98{
+    background-color: #DF3B98;
+    border: none;
+}
+.color_FFFFFF{
+    background-color: #ffffff;
+    border: none;
+    border: 1px solid #000;
+}
+.color_080D20{
+    background-color: #080D20;
+    border: none;
+}
+.color_492A91{
+    background-color: #492A91;
+    border: none;
+}
+.con5 .innerContent{
+    text-align: center;
+}
+.slideStation{
+    overflow: hidden;
+}
+.train{
+    width: 700%;
+    display: flex;
+    animation: slideMoveHorizontal 28s ease 0s infinite;
+}
+.train>li{
+    /* width: calc(100%/7); */
+    flex: 1;
+}
+.train>li figure{
+    line-height: 0;
+    border: 1px solid forestgreen;
+    /* width: 100%;
+    height: 600px; */
+}
+.train>li figure img{
+    width: 100%;
+    /* height: 100%; */
+    /* object-fit: cover; */
+}
+.train>li .innerContent{
+    display: flex;
+    text-align: left;
+    margin-top: 2rem;
+}
+.train>li .innerContent section{
+    flex: 1;
+}
+.train>li .innerContent section:nth-of-type(1){
+    margin-right: 7rem;
+}
+.train>li .innerContent section div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.train>li .innerContent section div h6{
+    font-weight: var(--font-weight-bold);
+}
+.train>li .innerContent section:nth-of-type(2){
+    display: flex;
+}
+.train>li .innerContent section dl{
+    flex: 1;
+}
+.train>li .innerContent section dl:nth-of-type(1){
+    margin-right: 1rem;
+}
+.train>li .innerContent section dl dt{
+    padding: 0.65rem 0;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 1rem;
+}
+.train>li .innerContent section dl dd{
+    display: flex;
+    align-items: center;
+}
+.color_ff006A{
+    background-color: ff006A;
+    border: none;
+}
+.color_000000{
+    background-color: 000000;
+    border: none;
+}
+.color_269C60{
+    background-color: 269C60;
+    border: none;
+}
+.color_E1F8B8{
+    background-color: E1F8B8;
+    border: none;
+}
+.color_4A563E{
+    background-color: 4A563E;
+    border: none;
+}
+.color_FCF9F0{
+    background-color: FCF9F0;
+    border: none;
+}
+.color_FB002C{
+    background-color: FB002C;
+    border: none;
+}
+.color_000000{
+    background-color: 000000;
+    border: none;
+}
+.color_293436{
+    background-color: 293436;
+    border: none;
+}
+.color_E0F3FA{
+    background-color: E0F3FA;
+    border: none;
+}
+.color_FFFDD0{
+    background-color: FFFDD0;
+    border: none;
+}
+.color_0B406A{
+    background-color: 0B406A;
+    border: none;
+}
+.color_FFFFFE{
+    background-color: #ffffff;
+    border: none;
+    border: 1px solid #000;
+}
+.color_483F39{
+    background-color: 483F39;
+    border: none;
+}

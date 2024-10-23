@@ -1,0 +1,75 @@
+.box{
+    border: 10px solid black;
+    width: 400px;
+    height: 400px;
+}
+.a{
+    position: relative;
+    /* left/right/top/bottom 각 지정한 면을 기준으로 안쪽으로 이동함/오른쪽 or 왼쪽 하나만 사용/위쪽 or 아래쪽 하나만 사용 */
+    /* position: relative는 원래 차지하던 공간을 위치를 변형해도 그대로 유지한다. */
+    left: 100px;
+}
+.b{
+    position: absolute;
+    /* 공중으로 뜨게됨 그래서 밑에 있는 p태그가 올라옴 그래서 클래스b 아래에 p태그가 있는 현상이 나타남 */
+    /*기준은 position:relative적용되어 있는 상위태그를 기준으로 위아래좌우로 이동함 */
+    right: 100px;
+    bottom: 100px;
+    background-color: aqua;
+    z-index: 2;
+}
+.c{
+    position: absolute;
+    right: 150px;
+    bottom: 150px;
+    background-color: lightcoral;
+    z-index: 1;
+}
+.d{
+    position: absolute;
+    right: 200px;
+    bottom: 200px;
+    background-color: yellow;
+}
+.boxwrap{
+    border: 10px solid orange;
+    height: 200vh;
+    /* 화면높이 2배만큼 */
+    position: relative;
+}
+.innerBox{
+    border: 10px solid green;
+    width: 1000px;
+    height: 100vh;
+    /* 화면만큼의 높이 */
+    /* position: relative; */
+    /* position: absolute의 기준이 명확하게 해주기 위해 부모태그에게 position: relative을 적용해준 것. 만약 상위 태그들이 position: relative가 없으면 그냥 바디태그 기준으로 방향이 적용이 됨 */
+    position: absolute;
+    left: 200px;
+    top: 200px;
+}
+.frame{
+    border: 10px solid red;
+    position: relative;
+    height: 500px;
+}
+.con{
+    border: 10px solid blue;
+    width: 60%;
+    margin: 0 auto;
+    /* 가변컨테이너 가변여백 */
+    position: absolute;
+    /* absolute를 쓰면 집나간 자식이라고 생각하기 /부모태그가 position: relative이걸 적용해도 자식태그에 텍스트들이 있으면 부모태그는 그냥 너비높이가 auto일 경우 촥 달라붙게 된다. 자식태그는 공중에 있기 때문에 / 그래서 부모태그는 너비높이를 지정해주어야 한다. */
+    left: 20%;
+    top: 100px;
+}
+.e{
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+}
+.f{
+    position: sticky;
+    left: 100px;
+    top: 100px;
+}

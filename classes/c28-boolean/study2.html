@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼항연산자 - ternary operator</title>
+</head>
+<body>
+    <h1>삼항연산자</h1>
+    <p>조건?조건이 참일 때 남겨지는 값:조건이 거짓일 때 남겨지는 값</p>
+    <script>
+        let result1 = 5>3?"a":"b" // let result1 = true?"a":"b" ->  let result1 = "a"
+        console.log(result1)
+        let result2 = ""?"배고픔":"배부름" // let result2 = false?"배고픔":"배부름" ->let result2 = "배부름"
+        console.log(result2)
+        let result3 = 3-3?100:50 //let result3 = 0?100:50 ->let result3 = 50
+        console.log(result3)
+        let score = 80
+        score>90?"A":"B" // ->"B" 
+        console.log(score>90?"A":score>80?"B":score>70?"C":"D") // 해석하는 방법은 {score>90?}{"A"}{:score>80?"B":score>70?"C":"D"} 먼저 이렇게 해석을 해서 풀고 순차적으로 넘어가면 된다.
+    </script>
+</body>
+</html>

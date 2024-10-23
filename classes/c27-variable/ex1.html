@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적표-예제</title>
+    <link rel="stylesheet" href="./css/ex1.css">
+</head>
+<body>
+    <!-- <p>사용자에게 이름과 국어,영어,수학,사회,과학 다섯과목의 점수를 각각 물어보고 입력한 점수의 합산점수, 평균을 계산하여 성적표 양식을 만들어주는 페이지를 제작해보자.</p> -->
+    <!-- <div class="score">
+        <h2>성적표</h2>
+        <p class="name">이름 : 이지은</p>
+        <table class="scoreTable">
+            <tr>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+                <th>사회</th>
+                <th>과학</th>
+            </tr>
+            <tr>
+                <td>20점</td>
+                <td>40점</td>
+                <td>100점</td>
+                <td>10점</td>
+                <td>50점</td>
+            </tr>
+            <tr>
+                <th colspan="5">합산점수</th>
+            </tr>
+            <tr>
+                <td colspan="5">220점</td>
+            </tr>
+            <tr>
+                <th colspan="5">평균</th>
+            </tr>
+            <tr>
+                <td colspan="5">44점</td>
+            </tr>
+        </table>
+        <p>이지은 학생의 평균점수는 44점으로 독려가 필요합니다.</p>
+    </div> -->
+    <script>
+        // 백틱으로 사용했을 때만 `+d+` 이걸 ${d} 이렇게 축약할 수 있음
+        let name = prompt("이름을 입력해주세요.")
+        let a = Number(prompt("국어점수"))
+        let b =  Number(prompt("영어점수"))
+        let c =  Number(prompt("수학점수"))
+        let d =  Number(prompt("사회점수"))
+        let e =  Number(prompt("과학점수"))
+        let total =  a+b+c+d+e
+        let average = total/5
+        // let average = Meth.round(average/5*100)/100 : 소수 둘째자리로 계산
+        // let average = Meth.round(average/5*1000)/1000 : 소수 셋째자리로 계산
+        // 근데 이렇게 하면 소수점이 억단위까지가면 너무 길어지고 힘들어지니까
+        // let average = Meth.round(average/5*(Math.pow(10,2)))/Math.pow(10,2) : 뒤에 2라는 숫자만 바꿔서 몇째자리로 할 건지 수정이 용이하게 축약함(현재 소수 둘째자리로 계산)
+        // 근데 이제 여기서 숫자를 두번바꿔줘야 하니까 변수를 만듦 
+        // let n = 2 ->//소수 둘째 자리로 계산 이렇게 써놓고 변수를 바꿔주는 거임
+        // average = Meth.round(average/5*(Math.pow(10,n)))/Math.pow(10,n)
+       
+
+
+
+        document.write(`<div class="score">
+        <h2>성적표</h2>
+        <p class="name">이름 : `+name+`</p>
+        <table class="scoreTable">
+            <tr>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+                <th>사회</th>
+                <th>과학</th>
+            </tr>
+            <tr>
+                <td>`+a+`점</td>
+                <td>`+b+`점</td>
+                <td>`+c+`점</td>
+                <td>${d}점</td>
+                <td>${e}점</td>
+            </tr>
+            <tr>
+                <th colspan="5">합산점수</th>
+            </tr>
+            <tr>
+                <td colspan="5">${total}점</td>
+            </tr>
+            <tr>
+                <th colspan="5">평균</th>
+            </tr>
+            <tr>
+                <td colspan="5">${average}점</td>
+            </tr>
+        </table>
+        <p>${name}의 학생의 평균점수는 ${average}점으로 독려가 필요합니다.</p>
+    </div>`)
+    </script>
+</body>
+</html>

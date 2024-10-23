@@ -1,0 +1,93 @@
+*{margin: 0; padding: 0;}
+.box{
+    border: 1px solid #000;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    /* 방향을 바꾸고 싶으면 direction속성사용 기본값은 row, row-reverse는 뒷쪽이 start지점이 되어서 끝부터 차례대로 아이템들이 놓아짐 */
+    justify-content: flex-start;
+    /* justify가 나오면 메인축 정렬을 말하는 거임 */
+    align-items: stretch;
+    /* 교차축에 따라 아이템들을 정렬해주는 속성(기본값은 stretch) */
+    flex-wrap: wrap;
+    /* flex-wrap: nowrap(기본값); -> 아이템들이 너무많아 플렉스컨테이너에서 넘치면 줄바꿈 안돼고 그냥넘침
+    근데 여기서 flex-wrap: wrap;을 하면 줄바꿈이 되면서 플렉스컨테이너 바깥으로 넘치지않음(교차축이 2개가 된 것) */
+    align-content: flex-start;
+    /* 시작부분에 정렬하는것 근데 이제 조건이 있음 flex-wrap:wrap을 한 경우에만 적용가능 */
+}
+.box > div{
+    border: 1px solid green;
+}
+.h100{
+    height: 100px;
+    /* 첫번째 아이템의 높이가 100px이 됐기때문에 뒤에 있는 아이템들도 높이가 같이 100px이 됨 */
+}
+.box2{
+    border: 10px solid black;
+    width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 50vh;
+    display: flex;
+    /* 얘가 대장이 되는거임 */
+    /* flex-wrap: wrap; */
+    /* 줄바꿈허용이라는 뜻 */
+}
+.box2>div{
+    border: 1px solid blue;
+    /* width: 200px; */
+    flex-basis: 200px;
+    /* 플렉스아이템들의 너비를 적용하는 속성 =width랑 똑같은 거 /flex-direction로 방향축을 바꿨다면 웹문서상에선 너비지만 실제 내가 볼땐 높이가 바뀌게 됨 */
+    flex-shrink: 1;
+    /* flex-shrink는 기본값이 1이다. */
+}
+.box2>div:nth-of-type(1){
+    /* flex-shrink: 2; */
+    /* 남들보다 2배 더 빼겠다는 소리임 */
+    flex-shrink: 0;
+    /* 나만 안줄어들겠다는 소리임 */
+}
+.box3{
+    border: 10px solid black;
+    width: 1000px;
+    height: 300px;
+    margin: 0 auto;
+    margin-bottom: 50vh;
+    display: flex;
+    /* 얘가 대장이 되는거임 */
+    /* flex-wrap: wrap; */
+    /* 줄바꿈허용이라는 뜻 */
+    align-items: center;
+}
+.box3>div{
+    border: 1px solid blue;
+    flex-grow: 1;
+    /* flex-grow의 기본값은 0이다. */
+}
+.box3>div:nth-of-type(1){
+    flex-grow: 3;
+    /* 남은여백을 얼마나 가질지 정하는 속성 */
+    order: 2;
+    align-self: flex-start;
+}
+.box3>div:nth-of-type(2){
+    order: 1;
+    align-self: stretch;
+}
+.box4{
+    border: 10px solid #000;
+    width: 80%;
+    min-height: 50vh;
+    margin: 0 auto;
+    display: flex;
+}
+.side{
+    background: lightcyan;
+    flex-basis: 200px;
+
+}
+.contents{
+    background: lightseagreen;
+    flex-grow: 1;
+}

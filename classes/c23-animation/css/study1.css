@@ -1,0 +1,32 @@
+@keyframes my_rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(140deg);
+    }
+}
+.box{
+    border: 5px solid #000;
+    width: 300px;
+    height: 300px;
+}
+.ani1{
+    /* animation-name: my_rotate;
+    animation-duration: 4s;
+    이 애니메이션을 몇초동안 지속할 것인가
+    animation-timing-function: linear;
+    /* 이 애니메이션의 속도감을 어떻게 할래 */
+    /* animation-delay: 0s; */
+    /* animation-iteration-count: infinite; */
+    /* 애니메이션의 회전 수를 정하는 값 */
+    /* animation-direction: alternate-reverse; */
+    /* 애니메이션의 방향을 정하는 값 */
+    /* animation-direction: normal; */
+    /* animation-fill-mode: forwards; */
+    animation: my_rotate 4s linear 0s infinite normal forwards;
+    /* 축약형표현 */
+}
+.ani1:hover{
+    animation-play-state: paused;
+}

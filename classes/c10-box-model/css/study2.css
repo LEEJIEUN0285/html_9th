@@ -1,0 +1,63 @@
+*{
+    margin: 0; 
+    /* 테두리 바깥 여백을 0 */
+    padding: 0;
+    /* 테두리 안쪽 여백을 0 */
+}
+
+.box1{
+    border: 10px solid black;
+    /* 테두리가 10px 실선의 검정색을 적용 */
+    width: 50%;
+    /* 부모태그(body태그) 너비의 50%라는 뜻 */
+}
+.box2{
+    margin-top: 50px;
+    /* 테두리 바깥여백을 위쪽으로 50px */
+    border: 10px solid black;
+    /* 테두리가 10px 실선의 검정색을 적용 */
+    width: 1000px;
+    /* 너비를 1000px(너비를 지정하면 고정값이 됨)*/
+}
+.box2 section{
+    border: 10px solid saddlebrown;
+    /* 테두리가 10px 실선의 새들브라운색을 적용 */
+    width: 50%;
+    /* box2클래스의 너비의 50% = 500px = 컨텐트박스 */
+}
+.box3{
+    border: 10px solid black;
+    /* 테두리가 10px 실선의 검정색을 적용 */
+    margin-top: 50px;
+    /* 테두리 바깥여백을 위쪽으로 50px */
+    width: 800px;
+    /* 너비를 800px(고정값) */
+}
+.box3 section{
+    border: 10px solid darkgreen;
+    /* 테두리가 10px 실선의 다크그린색을 적용 */
+    /* width: 100%; */
+    /* 부모태그(box3)만큼의 너비를 적용하겠다 */
+    width: 50vw;
+    /* vw단위는 viewport width = 화면너비에 대한 절반의 비율로 바뀜 */
+    height: 30vh;
+    /* vh단위는 viewport height = 화면높이에 대한 30%의 비율로 바뀜 */
+}
+.box4{
+    border: 10px solid black;
+    /* 테두리가 10px 실선의 검정색을 적용 */
+    margin-top: 50px;
+    /* 테두리 바깥여백을 위쪽으로 50px */
+    margin-left: 100px;
+    /* 테두리 바깥여백을 왼쪽으로 100px */
+}
+.box5{
+    border: 10px solid black;
+    /* 테두리가 10px 실선의 검정색을 적용 */
+    margin-top: 50px;
+    /* 테두리 바깥여백을 위쪽으로 50px */
+    margin-left: 100px;
+    /* 테두리 바깥여백을 왼쪽으로 100px */
+    width: 100%;
+    /* 부모태그(body태그) 너비의 100%라는 뜻 */
+}

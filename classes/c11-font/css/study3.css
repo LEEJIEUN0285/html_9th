@@ -1,0 +1,19 @@
+@font-face {
+    font-family: '잘난체';
+    /* 필수속성(지우면안됨/이름은 내가 편하게 바꿀 수 있음) */
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    /* 필수속성(지우면안됨) */
+    font-weight: normal;
+    /* 선택속성(지워도됨) */
+    font-style: normal;
+    /* 선택속성(지워도됨) */
+}
+.font1{
+    font-family: 잘난체;
+}
+.roboto{
+    font-family: "Roboto", sans-serif;
+}
+.Jacquarda{
+    font-family: "Jacquarda Bastarda 9", serif;
+}

@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.frame_wrap{
+    border-top: 10px solid black;
+    /* 테두리 위 10px 적용 */
+    border-bottom: 10px solid black;
+    /* 테두리 아래 10px 적용 */
+    padding: 20px 30px;
+    /* 테두리 안쪽여백이 현재 위아래/ 좌우 순으로 적어져있다(축약형 표현) */
+    width: 1000px;
+    /* 너비 1000px 적용 */
+}
+.common_frame{
+    border-bottom: 1px solid #555;
+    /* border는 테두리를 말함 */
+    padding: 20px;
+    /* padding은 테두리 안쪽 여백을 말함 */
+}
+.frame_1{
+    padding-top: 30px;
+    /* 테두리 안쪽 여백이 30px */
+}
+.common_frame.frame_2{
+    border: none;
+    /* border-bottom 1px준거 적용 안하겠다 */
+}
+.a{
+    padding: 10px 0;
+    /* 테두리안쪽여백이 위아래 10px / 좌우 0px */
+    background-color: salmon;
+    height: 150px;
+    /* 높이 150px 적용 */
+}
+.b{
+    background-color: sandybrown;
+    box-sizing: border-box;
+    /* 컨텐트박스사이즈를 보더박스사이즈로 하겠다 */
+    height: 200px;
+    /* 높이 200px 적용 */
+    border: 10px solid seagreen;
+    /* 테두리가 10px */
+}
+.c{
+    background-color: saddlebrown;
+    height: 250px;
+    /* 높이 250px 적용 */
+    padding: 10px;
+    /* 테두리 안쪽여백이 10px */
+    border: 10px solid violet;
+    /* 테두리가 10px */
+    box-sizing: border-box;
+    /* 컨텐트박스를 보더박스사이즈로 하겠다 */
+}
+
+/* 
+    A: frame_wrap클래스의 테두리를 포함한 박스너비 1060
+    B: a클래스의 테두리를 포함한 박스높이 170
+    C: b클래스의 컨텐트박스의 높이 180
+    D: c클래스의 테두리를 포함한 박스의 높이 250
+    E: frame_1클래스의 테두리를 포함한 박스의 높이 421
+    F: frame_2클래스의 테두리를 포함한 박스의 높이 290
+
+    A+B+C+D+E+F ? 2371
+
+
+*/

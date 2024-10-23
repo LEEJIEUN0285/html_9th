@@ -1,0 +1,34 @@
+@font-face{
+    font-family: "등록한폰트1";
+    /* 등록명은 순수영어일경우 쌍따옴표 없이 등록가능하고, 한글이 있거나 띄어쓰기가 있는 경우에는 앞뒤로 쌍따옴표를 써서 등록명을 표기한다. */
+    src:url("../font/ChangwonDangamAsac-Bold_0712.ttf");
+}
+.dangam{
+    font-family: "등록한폰트1";
+}
+@font-face{
+    font-family: "찹체";
+    src: url("../font/chab.ttf");
+}
+.chap{
+    font-family: "찹체";
+}
+@font-face{
+    font-family: "딱체";
+    src: url("../font/ddag.ttf");
+}
+.ddaq{
+    font-family: "딱체";
+}
+.ptag{
+    font-family: "내가등록한폰트1","찹체","딱체",sans-serif;
+    /*
+    내가등록한폰트1이 오류날 경우 찹체로 적용/ 찹체가 오류날 경우 딱체로, 딱체오류날 경우 sans-serif(항상 마지막에 산세리프나 세리프로 적용하기) 
+    윈도우버전폰트 맥버전폰트 두가지다 등록해놔야함
+    sans-serif -> 획이 없는 고딕체 계열로 적용한다. 
+    serif -> 획이 있는 명조체 계열로 적용한다. 
+    */
+}
+.f20{font-size: 20px;}
+.f30{font-size: 30px;}
+.f20.f30{font-size:50px}

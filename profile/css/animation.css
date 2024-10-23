@@ -1,0 +1,15 @@
+@keyframes slideMoveHorizontal {
+    0%{
+        transform: translateX(0%);
+    }
+    14.285%{ /* 100/7(나의 배너개수) */
+        transform: translateX(-14.285%);
+    }
+    28.57%{ /* 100/7=14.28 ->14.28 x 2  */
+        transform: translateX(-28.57%);
+    }
+    100%{
+        transform: translateX(calc(-(100%/7)*(7 - 1)));
+    }
+}
+
